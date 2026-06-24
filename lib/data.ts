@@ -379,6 +379,11 @@ export const FOOTER = {
       href: "https://www.linkedin.com/in/adrien-vidal-308b4864/",
       icon: "linkedin",
     },
+    {
+      label: "contact@viloris.io",
+      href: "mailto:contact@viloris.io",
+      icon: "email",
+    },
   ],
   ressources: [{ label: "FAQ", href: "#faq" }],
   legal: [
