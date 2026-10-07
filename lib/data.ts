@@ -266,7 +266,7 @@ export const FOUNDER_SECTION = {
   testimonial: {
     quote:
       "Il est intervenu sur des projets de A à Z, dans un contexte exigeant, avec des contraintes fortes de performance.",
-    author: "Marine Benoit-Jannin",
+    author: "Marine Delbeck",
     role: "Lead développeur front-end — Chanel",
   },
 };
