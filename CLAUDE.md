@@ -20,7 +20,7 @@ Next.js 15 App Router + React 19 + TypeScript + Tailwind v4 + Framer Motion. Dar
 - **Path alias** — `@/*` resolves to project root, not `src/`
 - **All components are `"use client"`** — Framer Motion usage throughout, no RSCs below page level
 - **Tailwind v4** — configured via `@theme` in `app/globals.css`, no `tailwind.config.ts`
-- **Fonts** — Inter (`font-sans`) + Space Grotesk (`font-display`) via Google Fonts in `layout.tsx`
+- **Fonts** — Inter (`font-sans`) + Space Grotesk (`font-display`) self-hosted via `next/font/local` (`app/fonts/`), not `next/font/google` (breaks Vercel builds)
 - **shadcn/ui** — `npx shadcn@latest add <component>` → lands in `components/ui/`
 - **All static content** (copy, URLs, data) lives in `lib/data.ts` — edit there first, never hardcode strings in components
 - **`SHOW_REALISATIONS`** boolean in `lib/data.ts` controls whether the réalisations section renders
