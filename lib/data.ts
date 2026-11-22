@@ -40,10 +40,10 @@ export const HERO = {
   headline: "Un outil fait pour",
   headline_accent: "votre façon de travailler.",
   description:
-    "Suivi des clients, relances, tableaux de bord : je construis l'outil dont votre équipe a besoin, pas un logiciel de plus auquel s'adapter. Vous demandez un changement, vous l'avez en 2 à 3 jours.",
+    "Je construis l'outil dont votre équipe a besoin pour suivre ses clients, ses dossiers et ses relances. Une fois en service, il évolue avec vous : un changement demandé est en ligne en 2 à 3 jours.",
   cta_primary: "Prendre rendez-vous",
   cta_secondary: "Voir un outil livré",
-  gdpr: "Conforme RGPD · vos données restent les vôtres",
+  gdpr: "Premier appel gratuit · 30 minutes · sans engagement",
   workflow: {
     filename: "demande_evolution",
     steps: [
@@ -94,14 +94,14 @@ export const TOOLS: { label: string; icon?: string }[] = [
 export const PAIN_SECTION = {
   label: "Le constat",
   title: "Le tableur partagé ne suffit plus.",
-  subtitle: "Et les logiciels du marché vous obligent à changer votre façon de travailler.",
+  subtitle: "Et les logiciels du marché vous demandent de travailler à leur façon.",
   cta: "En parler avec moi",
 };
 
 export const PAINS = [
   {
     title: "Des ressaisies",
-    body: "La même information tapée dans le tableur, l'agenda et le logiciel métier. Du temps perdu, et des erreurs qui finissent par coûter cher.",
+    body: "La même information tapée dans le tableur, l'agenda et le logiciel métier. Le temps perdu s'accumule, et un jour une échéance passe à la trappe.",
   },
   {
     title: "Des relances oubliées",
@@ -109,7 +109,7 @@ export const PAINS = [
   },
   {
     title: "Un logiciel qui ne vous ressemble pas",
-    body: "Trop de cases inutiles, pas celles dont vous avez besoin. Chaque demande de changement prend des mois, quand elle est acceptée.",
+    body: "Des dizaines de champs inutiles, et il manque celui dont vous avez besoin. Vous le signalez à l'éditeur, puis vous attendez des mois.",
   },
 ];
 
@@ -117,7 +117,7 @@ export const SERVICES_SECTION = {
   label: "Services",
   title: "Ce que je fais aussi",
   intro:
-    "L'outil sur mesure est le cœur de mon travail. Autour, je prends en charge ce qui vous fait perdre du temps, du diagnostic à la formation de vos équipes.",
+    "L'outil sur mesure est le cœur de mon travail. Je peux aussi prendre en charge ces besoins, seuls ou autour de votre outil.",
 };
 
 export const SERVICES: { icon: string; name: string; description: string; price: string }[] = [
@@ -125,7 +125,7 @@ export const SERVICES: { icon: string; name: string; description: string; price:
     icon: "ClipboardCheck",
     name: "Audit IA",
     description:
-      "Avant d'investir, savoir où l'IA et l'automatisation vous feront vraiment gagner du temps, avec des priorités classées.",
+      "Avant d'investir, savoir où l'IA et l'automatisation vous feront gagner du temps, avec des priorités classées.",
     price: "Dès 900 € HT",
   },
   {
@@ -165,8 +165,8 @@ export const REALISATIONS_SECTION = {
   label: "Réalisation",
   title: "Un outil livré, utilisé tous les jours",
   subtitle:
-    "Un cabinet d'expertise comptable a remplacé son fichier Excel partagé par un outil construit autour de sa façon de travailler.",
-  note: "Votre métier est différent ? C'est tout le principe : l'outil part de votre façon de travailler.",
+    "Un cabinet d'expertise comptable a remplacé son fichier Excel partagé par un outil construit pour ses 20 collaborateurs.",
+  note: "Votre métier est différent ? Tant mieux : je pars de vos étapes, de vos mots et de vos habitudes.",
   cta: "Prendre rendez-vous",
   problem_label: "Avant",
   solution_label: "Avec l'outil",
@@ -195,11 +195,11 @@ export const PROJECTS: Project[] = [
     tags: ["Outil sur mesure", "Expertise comptable", "20 collaborateurs"],
     subtitle: "CRM de gestion des clients et de suivi fiscal",
     description:
-      "500 dossiers clients, le suivi fiscal de chacun et les relances avant chaque échéance, réunis dans un seul outil, accessible depuis un ordinateur ou un téléphone.",
+      "500 dossiers clients et leur suivi fiscal, réunis dans un seul outil. Les relances partent toutes seules avant chaque échéance.",
     problem:
       "Les 500 clients et leurs échéances fiscales vivaient dans un fichier Excel partagé par 20 collaborateurs. Un code couleur pour savoir qui avait validé quoi, des modifications qui s'écrasaient, des relances faites de mémoire.",
     solution:
-      "Des fiches clients et des types d'impôts que le cabinet paramètre lui-même, des droits par profil, l'historique de chaque validation, et des relances automatiques à 60, 30 et 15 jours de chaque échéance. L'outil et les données appartiennent au cabinet.",
+      "Le cabinet paramètre lui-même ses fiches clients et ses types d'impôts. Chacun voit ce que son profil autorise, et chaque validation est tracée. Les relances partent à 60, 30 et 15 jours de chaque échéance. L'outil et les données appartiennent au cabinet.",
     metric: { value: "2 à 3 jours", label: "pour chaque évolution demandée" },
     images: [],
   },
@@ -216,7 +216,7 @@ export const PROCESS_SECTION = {
   title: "Du premier appel au suivi, quatre étapes.",
   beyond_title: "Et une fois l'outil en place ?",
   beyond_description:
-    "Votre activité change, votre outil aussi. Avec le suivi mensuel, vous me demandez une évolution et vous l'avez en 2 à 3 jours. Maintenance et accompagnement dès 140 € HT par mois.",
+    "Avec le suivi mensuel, je surveille que tout fonctionne et je fais évoluer l'outil à mesure que votre activité change. Dès 140 € HT par mois.",
   cta: "Parler de mon projet",
 };
 
@@ -224,27 +224,27 @@ export const PROCESS_STEPS = [
   {
     n: "01",
     title: "Appel découverte, gratuit",
-    body: "30 minutes pour comprendre votre activité et ce qui vous ralentit. Des questions, pas de démonstration commerciale, aucun engagement.",
+    body: "30 minutes pour comprendre votre activité et ce qui vous ralentit. Je pose des questions, vous ne vous engagez à rien.",
   },
   {
     n: "02",
     title: "Proposition sous 48 h",
-    body: "Un périmètre précis, un prix ferme et un calendrier. Vous savez exactement ce que vous achetez.",
+    body: "Ce que je construis, le prix ferme et le calendrier, écrits noir sur blanc avant de commencer.",
   },
   {
     n: "03",
     title: "Réalisation par étapes",
-    body: "Je vous montre l'outil à chaque étape et vous l'essayez sur vos vrais cas. Vos retours sont pris en compte au fil de l'eau, et votre équipe est formée.",
+    body: "Je vous montre l'outil à chaque étape et vous l'essayez sur vos vrais dossiers. J'intègre vos retours au fur et à mesure, puis je forme votre équipe.",
   },
   {
     n: "04",
     title: "Suivi dans la durée",
-    body: "Votre outil continue de fonctionner et évolue avec vous. Une demande de changement, et elle est en ligne en 2 à 3 jours.",
+    body: "Une fois l'outil en service, vous me demandez un changement et il est en ligne en 2 à 3 jours.",
   },
 ];
 
 export const FOUNDER_SECTION = {
-  label: "Le mot du fondateur",
+  label: "Qui je suis",
   name: "Adrien Vidal",
   company: "Fondateur · VILORIS.IO",
   role: "Développeur d'outils sur mesure",
@@ -256,7 +256,7 @@ export const FOUNDER_SECTION = {
     quote:
       "Il est intervenu sur des projets de A à Z, dans un contexte exigeant, avec des contraintes fortes de performance.",
     author: "Marine Delbeck",
-    role: "Lead développeur front-end — Chanel",
+    role: "Lead développeur front-end · Chanel",
   },
 };
 
@@ -272,7 +272,7 @@ export const FAQ = [
     q: "Comment se passe un projet concrètement ?",
     a: `Tout commence par un appel de 30 minutes, gratuit et sans engagement. Je cherche à comprendre votre activité : qui fait quoi, avec quels outils, et où se perd le temps.
 
-Si je peux vous aider, vous recevez sous 48 h une proposition avec un périmètre précis, un prix ferme et un calendrier.
+Si je peux vous aider, vous recevez sous 48 h une proposition écrite : ce que je construis, le prix ferme et le calendrier.
 
 Ensuite, je construis par étapes. À chaque étape, je vous montre l'outil et vous l'essayez sur vos vrais cas. Rien n'est figé avant que vous l'ayez validé.`,
   },
@@ -286,9 +286,9 @@ Pour faire évoluer l'outil dans la durée, le suivi mensuel démarre à 140 €
   },
   {
     q: "Combien de temps avant d'utiliser l'outil ?",
-    a: `Le développement va vite. Ce qui fixe le rythme, c'est surtout le temps que vous pouvez consacrer aux essais et aux retours.
+    a: `Le rythme dépend surtout du temps que votre équipe peut consacrer aux essais et aux retours.
 
-C'est pour ça que je travaille par étapes : vous avez une première version entre les mains tôt, et on l'ajuste ensemble à votre rythme jusqu'à la mise en service.
+Je travaille donc par étapes : vous avez une première version entre les mains tôt, et on l'ajuste ensemble jusqu'à la mise en service.
 
 Une fois l'outil en service, une demande de changement est en ligne en 2 à 3 jours.`,
   },
@@ -300,7 +300,7 @@ Je forme les personnes qui vont s'en servir, et chaque outil est livré avec sa 
   },
   {
     q: "Que deviennent mes données ?",
-    a: `Elles restent les vôtres. L'outil s'appuie sur des services reconnus et conformes au RGPD, et vous gardez un accès complet à vos données à tout moment.
+    a: `Elles restent les vôtres. La base de données peut être ouverte à votre nom : le Cabinet Serre est propriétaire de la sienne. Les services utilisés sont conformes au RGPD, et vous gardez un accès complet à vos données.
 
 Le choix de l'hébergement se fait avec vous, selon la sensibilité de vos informations. Si vous avez une contrainte particulière, on en parle dès le premier appel.`,
   },
@@ -313,10 +313,10 @@ Je vérifie avant de m'engager que ces connexions sont possibles avec vos logici
 ];
 
 export const CTA_FINAL = {
-  headline: "Votre façon de travailler mérite",
-  headline_accent: "un outil à sa mesure.",
+  headline: "Un tableur qui déborde, des relances oubliées ?",
+  headline_accent: "Parlons-en.",
   description:
-    "Parlons-en 30 minutes. Vous repartez avec une idée claire de ce qui est possible, même si on ne travaille pas ensemble.",
+    "30 minutes en visio. Vous repartez avec une idée claire de ce qui est possible, même si on ne travaille pas ensemble.",
   cta: "Prendre rendez-vous",
   subtext: "Gratuit et sans engagement",
 };
@@ -384,7 +384,7 @@ export const FOOTER = {
     { label: "Politique de cookies (UE)", href: "/cookies" },
   ],
   subfooter: {
-    text: "© Tous droits réservés — Site réalisé par ",
+    text: "© Tous droits réservés · Site réalisé par ",
     linkLabel: "Viloris.io",
     linkHref: SITE_URL,
   },
