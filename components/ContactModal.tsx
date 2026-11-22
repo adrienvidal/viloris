@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, Shield, CheckCircle2, Loader2, CalendarDays } from "lucide-react";
-import { CALENDLY_URL, CONTACT_FORM } from "@/lib/data";
+import { CALENDLY_URL, CONTACT_EMAIL, CONTACT_FORM } from "@/lib/data";
 import { useContactModal } from "@/lib/contact-modal-context";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -34,7 +34,6 @@ export function ContactModal() {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<Status>("idle");
-  const [errorMsg, setErrorMsg] = useState("");
 
   const firstInputRef = useRef<HTMLInputElement>(null);
 
@@ -71,7 +70,6 @@ export function ContactModal() {
     setSelectedServices([]);
     setMessage("");
     setStatus("idle");
-    setErrorMsg("");
   }
 
   function handleClose() {
@@ -88,7 +86,6 @@ export function ContactModal() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus("loading");
-    setErrorMsg("");
 
     try {
       const res = await fetch("/api/contact", {
@@ -97,20 +94,17 @@ export function ContactModal() {
         body: JSON.stringify({ name, email, company, services: selectedServices, message }),
       });
 
-      if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error ?? "Erreur lors de l'envoi.");
-      }
-
-      setStatus("success");
-    } catch (err) {
-      setErrorMsg(err instanceof Error ? err.message : "Une erreur est survenue.");
+      setStatus(res.ok ? "success" : "error");
+    } catch {
       setStatus("error");
     }
   }
 
   const inputClass =
     "w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/15 transition";
+
+  const fallbackLinkClass =
+    "rounded-full border border-destructive/40 px-3 py-1.5 font-medium text-foreground transition hover:bg-destructive/15";
 
   return (
     <AnimatePresence>
@@ -278,9 +272,27 @@ export function ContactModal() {
                     </div>
 
                     {status === "error" && (
-                      <p className="rounded-lg bg-destructive/10 border border-destructive/30 px-4 py-2.5 text-xs text-destructive">
-                        {errorMsg}
-                      </p>
+                      <div className="rounded-lg bg-destructive/10 border border-destructive/30 px-4 py-3 text-xs text-destructive">
+                        <p>{CONTACT_FORM.error.message}</p>
+                        <div className="mt-2.5 flex flex-wrap gap-2">
+                          <a
+                            href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+                              CONTACT_FORM.error.mailSubject,
+                            )}&body=${encodeURIComponent(message)}`}
+                            className={fallbackLinkClass}
+                          >
+                            {CONTACT_FORM.error.emailCta} · {CONTACT_EMAIL}
+                          </a>
+                          <a
+                            href={CALENDLY_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={fallbackLinkClass}
+                          >
+                            {CONTACT_FORM.error.calendlyCta}
+                          </a>
+                        </div>
+                      </div>
                     )}
 
                     <button
