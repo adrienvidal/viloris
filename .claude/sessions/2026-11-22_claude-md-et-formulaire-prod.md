@@ -1,11 +1,11 @@
-# 2026-11-22 — CLAUDE.md à jour, formulaire de contact réparé en production
+# 2026-11-22 — Formulaire réparé, site remis à niveau et réécrit autour de l'offre réelle
 
 ## Reprise
 
 ```
-✅ Fait      Formulaire réparé, écran de repli en cas d'échec en prod (PR #6, #7)
-⛔ Bloqué    Rien
-🎯 Priorité  Alerte téléphone si le formulaire échoue (optionnel)
+✅ Fait      Site sécurisé, allégé et réécrit autour du sur-mesure, en prod (PR #9 à #12)
+⛔ Bloqué    Captures Serre et lien vidéo LinkedIn (Adrien)
+🎯 Priorité  Ajouter captures et vidéo Serre, puis cadrer le lot 3 (look)
 ```
 
 ## Réalisé
@@ -43,16 +43,51 @@
   une confirmation au prospect qui échoue n'affiche plus d'erreur. Les échecs sont tracés dans les journaux
   avec leur cause. Testé en local avec un mot de passe Gmail faux.
 
+### Après-midi : audit, lot 1 (technique) et lot 2 (contenu)
+
+- Revue de contact@viloris.io depuis le 24/06 : aucun prospect perdu par mail pendant la panne du
+  formulaire. Seul rendez-vous venu du site : Stephen Granger (Calendly, 08/09), tenu.
+- Audit global du site : stack saine, interface propre mais générique, contenu périmé (cas inventés,
+  promesse fausse « aucune plateforme américaine », je/nous mélangés, processus obsolète).
+- Lot 1 en production (PR #9, #10) : Next 15.5.29 (faille critique), nodemailer 10 (failles sur
+  l'adresse saisie dans le formulaire, envoi réel testé), page d'accueil de 2,25 Mo à 177 Ko (la barre
+  d'outils importait les ~3 000 icônes de simple-icons), adresse officielle `www.viloris.io`
+  (canonical, sitemap, robots, JSON-LD), lint au vert, `tsconfig.tsbuildinfo` retiré du suivi.
+- Lot 2 cadré avec Adrien puis en production (PR #11, #12). Note de cadrage :
+  `docs/superpowers/specs/2026-11-22-lot2-contenu-offre-reelle-design.md`, plan :
+  `docs/superpowers/plans/2026-11-22-lot2-contenu-offre-reelle.md`. Message : « Un outil fait pour
+  votre façon de travailler », évolutions en ligne en 2 à 3 jours. Cas réel Cabinet Serre (faits du
+  devis de juillet) à la place des 3 cas inventés, 5 services courts avec prix du catalogue d'octobre,
+  démarche en 4 étapes, « je » partout, FAQ réécrite, image d'aperçu LinkedIn refaite.
+- Relecture indépendante de la branche : rien de bloquant, deux phrases corrigées (prix du suivi
+  ambigu, évolutions qui semblaient gratuites). Puis repasses copy-editing et humanizer sur les textes.
+- Item « revue de la boîte contact depuis juin » refermé (voir plus haut).
+
 ## Reste à faire
+- [ ] Captures de l'outil Serre avec données fictives (2 ou 3) et lien de la vidéo LinkedIn : à
+  déposer dans `public/realisations/` et `videoUrl` dans `lib/data.ts` (emplacements prêts).
+- [ ] Pyrène en deuxième cas de réalisation, après accord de l'école et une fois Onyx stable.
+- [ ] Optionnel : une phrase de Clément Serre pour remplacer le témoignage Delbeck.
+- [ ] Lot 3 : le look (sortir du modèle d'agence IA, barre d'outils lisible, 5 cartes services en
+  rangées équilibrées). Passer par une maquette avant de coder.
+- [ ] Plus tard : passer à Next 16 (dernière alerte postcss, sans risque réel aujourd'hui) et retirer
+  `runtime = "edge"` de `app/og/route.tsx`.
 - [ ] Optionnel : alerte téléphone en cas d'échec du formulaire (ntfy, hors Gmail).
-- [ ] Optionnel : passer en revue la boîte contact@viloris.io depuis juin pour repérer un prospect
-  qui aurait écrit directement après un échec du formulaire.
 - [ ] Si les aperçus de `dev` doivent envoyer des mails : ajouter les variables Gmail pour Preview.
 
 ## Blockers
 - Aucun.
 
 ## Décisions
+- Positionnement du site : sur-mesure poussé dans le détail, réactivité (évolution en ligne en 2 à 3
+  jours). Ne jamais annoncer de durée totale (environ 3 mois pour Serre, surtout à cause des retours
+  et de la recette client) ni rien qui laisse croire que les évolutions sont gratuites.
+- Visiteurs du site : LinkedIn et bouche-à-oreille, but unique : prendre rendez-vous. Le seul vrai
+  prospect (Auratio) est venu d'une vidéo LinkedIn montrant le CRM Serre.
+- Serre peut être cité nommément, captures avec données fictives seulement.
+- Outils personnels (Cockpit, Studio, Job-finder…) : pas sur l'accueil, une phrase dans la bio.
+- Parcours formulaire puis Calendly gardé tel quel. Sujets des mails « [Audit] » et pages légales
+  inchangés.
 - Pas d'alerte envoyée par Gmail : elle tomberait en panne en même temps que le formulaire. Une vraie
   alerte doit passer par un autre canal (ntfy envisagé), reportée.
 - `npm run lint` remonte une erreur dans `next-env.d.ts` (généré par Next.js), antérieure à ce lot.
