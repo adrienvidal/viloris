@@ -21,8 +21,8 @@ export const NAV = {
 };
 
 export const NAV_LINKS = [
-  { label: "Services", href: "#services" },
   { label: "Réalisation", href: "#realisations" },
+  { label: "Services", href: "#services" },
   { label: "Démarche", href: "#processus" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -37,17 +37,17 @@ export const HERO = {
   cta_secondary: "Voir un outil livré",
   gdpr: "Conforme RGPD · vos données restent les vôtres",
   workflow: {
-    filename: "lead_qualification",
+    filename: "demande_evolution",
     steps: [
-      { label: "Lead reçu via formulaire", time: "09:42:01" },
-      { label: "Agent IA analyse le profil", time: "09:42:02" },
-      { label: "Score de qualification : 87/100", time: "09:42:03" },
-      { label: "CRM mis à jour automatiquement", time: "09:42:04" },
-      { label: "Email de bienvenue envoyé", time: "09:42:04" },
-      { label: "Notification Slack → vous", time: "09:42:05" },
+      { label: "Demande : un statut « À relancer »", time: "Lun 09:12" },
+      { label: "Besoin précisé avec vous", time: "Lun 09:40" },
+      { label: "Développement et tests", time: "Mar 10:05" },
+      { label: "Démonstration envoyée", time: "Mar 16:20" },
+      { label: "Validé de votre côté", time: "Mer 11:30" },
+      { label: "En ligne pour toute l'équipe", time: "Mer 17:40" },
     ],
-    footer: "6 actions · 0 intervention humaine",
-    caption: "Exemple d'automatisation déployée en 2 semaines",
+    footer: "De la demande à la mise en ligne : 2 jours",
+    caption: "Exemple du rythme d'une évolution, une fois l'outil en service",
   },
   clients_tagline:
     "Avant Viloris, 12 ans de développement pour de grandes marques. Le même niveau d'exigence, appliqué à l'outil de votre PME.",
