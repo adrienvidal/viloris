@@ -1,8 +1,47 @@
 "use client";
 
-import * as Si from "@icons-pack/react-simple-icons";
+import {
+  SiAirtable,
+  SiAnthropic,
+  SiGithub,
+  SiHuggingface,
+  SiLangchain,
+  SiLinear,
+  SiMake,
+  SiN8n,
+  SiNextdotjs,
+  SiNotion,
+  SiPostgresql,
+  SiPython,
+  SiStripe,
+  SiSupabase,
+  SiTailwindcss,
+  SiVercel,
+  SiZapier,
+} from "@icons-pack/react-simple-icons";
 import { motion } from "framer-motion";
 import { TOOLS } from "@/lib/data";
+
+// Named imports only: `import * as Si` bundles all ~3,000 icons (~2 MB)
+const ICONS: Record<string, React.ElementType> = {
+  SiAirtable,
+  SiAnthropic,
+  SiGithub,
+  SiHuggingface,
+  SiLangchain,
+  SiLinear,
+  SiMake,
+  SiN8n,
+  SiNextdotjs,
+  SiNotion,
+  SiPostgresql,
+  SiPython,
+  SiStripe,
+  SiSupabase,
+  SiTailwindcss,
+  SiVercel,
+  SiZapier,
+};
 
 export function ToolsBar() {
   const items = [...TOOLS, ...TOOLS];
@@ -21,9 +60,7 @@ export function ToolsBar() {
           style={{ willChange: "transform" }}
         >
           {items.map((t, i) => {
-            const Icon = t.icon
-              ? (Si as unknown as Record<string, React.ElementType>)[t.icon]
-              : null;
+            const Icon = t.icon ? ICONS[t.icon] : null;
             return Icon ? (
               <span
                 key={i}
