@@ -3,9 +3,9 @@
 ## Reprise
 
 ```
-✅ Fait      CLAUDE.md aligné sur la base (PR #1), formulaire de contact réparé en prod
+✅ Fait      Formulaire réparé en prod, écran de repli en cas d'échec (PR #6)
 ⛔ Bloqué    Rien
-🎯 Priorité  Formulaire : solution de repli en cas d'échec + alerte (à décider)
+🎯 Priorité  Fusionner la PR #6 puis mettre en production
 ```
 
 ## Réalisé
@@ -37,9 +37,14 @@
   (plan gratuit), appels de fonction visibles sur 30 min seulement sans Observability Plus,
   la modale n'est pas une page donc Analytics ne la voit pas, et le code ne trace pas les échecs.
 
+- Formulaire, PR #6 vers `dev` (non fusionnée) : en cas d'échec, la modale propose l'adresse mail
+  (mail pré-rempli avec le message) et le lien Calendly. Le mail de notification décide seul du succès :
+  une confirmation au prospect qui échoue n'affiche plus d'erreur. Les échecs sont tracés dans les journaux
+  avec leur cause. Testé en local avec un mot de passe Gmail faux.
+
 ## Reste à faire
-- [ ] Formulaire : en cas d'échec, afficher l'adresse mail et le lien Calendly (aujourd'hui seulement
-  « Erreur lors de l'envoi. Veuillez réessayer. »), et prévoir une alerte quand un envoi échoue.
+- [ ] Fusionner la PR #6 dans `dev` (accord d'Adrien), puis mettre `dev` en production.
+- [ ] Optionnel : alerte téléphone en cas d'échec du formulaire (ntfy, hors Gmail).
 - [ ] Optionnel : passer en revue la boîte contact@viloris.io depuis juin pour repérer un prospect
   qui aurait écrit directement après un échec du formulaire.
 - [ ] Si les aperçus de `dev` doivent envoyer des mails : ajouter les variables Gmail pour Preview.
@@ -48,6 +53,9 @@
 - Aucun.
 
 ## Décisions
+- Pas d'alerte envoyée par Gmail : elle tomberait en panne en même temps que le formulaire. Une vraie
+  alerte doit passer par un autre canal (ntfy envisagé), reportée.
+- `npm run lint` remonte une erreur dans `next-env.d.ts` (généré par Next.js), antérieure à ce lot.
 - Stats de visites : `npx vercel metrics vercel.analytics.page_view.count -e production --since 30d`
   (avec `--group-by requestPath|referrerHostname|country|deviceType|visitorId`).
 - Les notes de session sont versionnées dans git, comme le prévoit le CLAUDE.md.
