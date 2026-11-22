@@ -107,55 +107,51 @@ export const PAINS = [
 
 export const SERVICES_SECTION = {
   label: "Services",
-  title: "Ce que je fais pour vous",
+  title: "Ce que je fais aussi",
   intro:
-    "Je conçois des systèmes digitaux complets : site haute performance, agents IA et automatisations, pour que votre business attire, qualifie et convertit en automatique.",
+    "L'outil sur mesure est le cœur de mon travail. Autour, je prends en charge ce qui vous fait perdre du temps, du diagnostic à la formation de vos équipes.",
 };
 
-export const SERVICES = [
+export const SERVICES: { icon: string; name: string; description: string; price: string }[] = [
   {
-    badge: "Par où commencer",
+    icon: "ClipboardCheck",
+    name: "Audit IA",
+    description:
+      "Avant d'investir, savoir où l'IA et l'automatisation vous feront vraiment gagner du temps, avec des priorités classées.",
+    price: "Dès 900 € HT",
+  },
+  {
+    icon: "Workflow",
+    name: "Automatisations et connexions",
+    description:
+      "Relances, tri des emails, outils qui se parlent : une information saisie une fois, disponible partout.",
+    price: "Dès 800 € HT",
+  },
+  {
     icon: "Bot",
-    name: "Agents IA & Automatisations",
+    name: "Agents IA",
     description:
-      "Vos leads qualifiés, vos emails traités, vos outils synchronisés. Sans que vous leviez le petit doigt.",
-    items: [
-      "Agent IA de qualification de leads",
-      "Agent IA support client / FAQ",
-      "Automatisations métier sur-mesure (N8n)",
-      "Audit & cartographie de vos flux automatisables",
-    ],
+      "Une réceptionniste qui répond à vos appels, un agent d'accueil sur votre site, un assistant qui connaît vos documents.",
+    price: "Dès 400 € HT",
   },
   {
-    badge: "L'étape suivante",
     icon: "Globe",
-    name: "Site Web Haute Performance",
+    name: "Site web",
     description:
-      "Un site qui travaille pour vous 24h/24. Chaque page est conçue pour transformer un visiteur en prospect qualifié.",
-    items: [
-      "Site vitrine premium orienté conversion",
-      "Landing page campagne",
-      "Refonte de site existant",
-      "Intégration d'un agent IA directement dans votre site",
-    ],
+      "Un site rapide et clair, pensé pour la prise de contact, avec des formulaires reliés à vos outils.",
+    price: "Dès 800 € HT",
   },
   {
-    badge: "Pour durer et scaler",
-    icon: "Wrench",
-    name: "Maintenance & Évolution Continue",
+    icon: "GraduationCap",
+    name: "Formation et suivi",
     description:
-      "Votre système évolue avec vous chaque mois. Zéro bug non traité, zéro automatisation qui décroche.",
-    items: [
-      "Maintenance site (sécurité, performances, mises à jour)",
-      "Suivi & évolution de vos agents IA",
-      "Gestion continue de vos automatisations N8n",
-      "Accompagnement stratégique mensuel",
-    ],
+      "Des formations sur vos propres cas, et un suivi mensuel pour que vos outils continuent d'évoluer avec vous.",
+    price: "Dès 800 € HT",
   },
 ];
 
 export const SERVICES_LIAISON =
-  "La plupart des clients commencent par un agent IA. Le reste suit naturellement.";
+  "Prix indicatifs hors taxes. Le prix et le délai définitifs sont fixés dans la proposition, après un appel gratuit.";
 
 export const REALISATIONS_SECTION = {
   label: "Réalisation",
