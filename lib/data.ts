@@ -158,53 +158,44 @@ export const SERVICES_LIAISON =
   "La plupart des clients commencent par un agent IA. Le reste suit naturellement.";
 
 export const REALISATIONS_SECTION = {
-  label: "Systèmes types",
-  title: "Ce que nous pouvons construire pour vous",
+  label: "Réalisation",
+  title: "Un outil livré, utilisé tous les jours",
   subtitle:
-    "Des exemples de ce que nous construisons. Chaque mission part de votre réalité, pas d'un catalogue.",
-  note: "Votre situation ne ressemble à aucun de ces cas ? C'est souvent le signe qu'elle mérite une solution sur-mesure.",
-  demo_badge: "Cas d'usage",
-  cta: "Réserver mon audit gratuit",
-  problem_label: "Problème",
-  solution_label: "Solution",
+    "Un cabinet d'expertise comptable a remplacé son fichier Excel partagé par un outil construit autour de sa façon de travailler.",
+  note: "Votre métier est différent ? C'est tout le principe : l'outil part de votre façon de travailler.",
+  cta: "Prendre rendez-vous",
+  problem_label: "Avant",
+  solution_label: "Avec l'outil",
+  video_cta: "Voir l'outil en vidéo",
 };
 
-export const PROJECTS = [
+export type Project = {
+  name: string;
+  badge: string;
+  tags: string[];
+  subtitle: string;
+  description: string;
+  problem: string;
+  solution: string;
+  metric: { value: string; label: string };
+  images: { src: string; alt: string }[];
+  videoUrl?: string;
+};
+
+export const PROJECTS: Project[] = [
   {
-    name: "Qualification de leads IA",
-    tags: ["Agent IA sur-mesure", "N8n", "RAG"],
-    subtitle: "Qualification de leads automatique",
+    name: "Cabinet Serre",
+    badge: "Client",
+    tags: ["Outil sur mesure", "Expertise comptable", "20 collaborateurs"],
+    subtitle: "CRM de gestion des clients et de suivi fiscal",
     description:
-      "Un agent IA qui qualifie les leads entrants 24h/24, répond aux questions fréquentes et prend les rendez-vous sans intervention humaine.",
+      "500 dossiers clients, le suivi fiscal de chacun et les relances avant chaque échéance, réunis dans un seul outil, accessible depuis un ordinateur ou un téléphone.",
     problem:
-      "Vous triez vos leads manuellement, répondez aux mêmes questions, gérez les rendez-vous à la main. Des heures perdues chaque jour, sans garantie de suivi.",
+      "Les 500 clients et leurs échéances fiscales vivaient dans un fichier Excel partagé par 20 collaborateurs. Un code couleur pour savoir qui avait validé quoi, des modifications qui s'écrasaient, des relances faites de mémoire.",
     solution:
-      "Un workflow N8n couplé à un agent RAG qui analyse, qualifie et route chaque lead vers le bon interlocuteur.",
-    metric: { value: "3h", label: "Gain de temps par jour" },
-  },
-  {
-    name: "Synchronisation CRM automatisée",
-    tags: ["Automatisation", "CRM", "Reporting"],
-    subtitle: "Synchronisation CRM × Notion × Email",
-    description:
-      "Toutes les données client centralisées et synchronisées en temps réel. Reporting automatique chaque lundi matin.",
-    problem:
-      "Vos outils ne communiquent pas entre eux. Chaque donnée est saisie deux fois, les rapports n'existent pas, les décisions se prennent à l'instinct.",
-    solution:
-      "Un pipeline N8n bidirectionnel qui synchronise tout automatiquement et génère des rapports via IA.",
-    metric: { value: "100%", label: "Données fiables, zéro saisie manuelle" },
-  },
-  {
-    name: "Relances commerciales automatiques",
-    tags: ["Automatisation", "N8n", "Email"],
-    subtitle: "Séquence de suivi post-devis automatisée",
-    description:
-      "Un système qui détecte les devis sans réponse et déclenche une séquence de relance personnalisée au bon moment — sans aucune intervention manuelle.",
-    problem:
-      "Vous envoyez un devis et vous attendez. Les relances manuelles tombent dans l'oubli. Des prospects chauds refroidissent faute d'un simple suivi.",
-    solution:
-      "Un workflow N8n qui surveille vos devis ouverts et envoie des relances ciblées selon l'inaction du prospect, jusqu'à la décision.",
-    metric: { value: "0", label: "prospect oublié après un devis envoyé" },
+      "Des fiches clients et des types d'impôts que le cabinet paramètre lui-même, des droits par profil, l'historique de chaque validation, et des relances automatiques à 60, 30 et 15 jours de chaque échéance. L'outil et les données appartiennent au cabinet.",
+    metric: { value: "2 à 3 jours", label: "pour chaque évolution demandée" },
+    images: [],
   },
 ];
 
