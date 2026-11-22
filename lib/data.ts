@@ -6,35 +6,36 @@ export const CALENDLY_URL = "https://calendly.com/contact-viloris/30min";
 export const CONTACT_EMAIL = "contact@viloris.io";
 
 export const META = {
-  title: "viloris.io — Automatisation IA & Agents sur-mesure",
+  title: "Viloris · Outils sur mesure pour PME, ajustés en 2 à 3 jours",
   description:
-    "Développeur senior (Chanel, Darty, Fnac) spécialisé en automatisation IA et agents sur-mesure pour les PME qui veulent scaler sans recruter. Diagnostic gratuit 30 min.",
+    "Je construis l'outil fait pour votre façon de travailler : suivi des clients, relances, tableaux de bord. Vous demandez un changement, vous l'avez en 2 à 3 jours. Premier appel gratuit.",
   og: {
-    title: "viloris.io — Automatisation IA & Agents sur-mesure",
-    description: "Automatisation IA et agents sur-mesure pour PME. Diagnostic gratuit 30 min.",
+    title: "Viloris · Un outil fait pour votre façon de travailler",
+    description:
+      "Outils sur mesure pour PME. Vous demandez un changement, vous l'avez en 2 à 3 jours.",
   },
 };
 
 export const NAV = {
-  cta: "Audit gratuit",
+  cta: "Prendre rendez-vous",
 };
 
 export const NAV_LINKS = [
   { label: "Services", href: "#services" },
-  { label: "Réalisations", href: "#realisations" },
-  { label: "Processus", href: "#processus" },
+  { label: "Réalisation", href: "#realisations" },
+  { label: "Démarche", href: "#processus" },
   { label: "FAQ", href: "#faq" },
 ];
 
 export const HERO = {
-  badge: "Automatisations & Agents IA",
-  headline: "Travaillez moins.",
-  headline_accent: "Produisez plus.",
+  badge: "Outils sur mesure pour PME",
+  headline: "Un outil fait pour",
+  headline_accent: "votre façon de travailler.",
   description:
-    "Nous aidons les entreprises à scaler sans recruter: en construisant l'infrastructure IA et web qui travaille à leur place.",
-  cta_primary: "Réserver mon audit gratuit",
-  cta_secondary: "Voir mes réalisations",
-  gdpr: "RGPD · données hébergées en Europe",
+    "Suivi des clients, relances, tableaux de bord : je construis l'outil dont votre équipe a besoin, pas un logiciel de plus auquel s'adapter. Vous demandez un changement, vous l'avez en 2 à 3 jours.",
+  cta_primary: "Prendre rendez-vous",
+  cta_secondary: "Voir un outil livré",
+  gdpr: "Conforme RGPD · vos données restent les vôtres",
   workflow: {
     filename: "lead_qualification",
     steps: [
@@ -49,7 +50,7 @@ export const HERO = {
     caption: "Exemple d'automatisation déployée en 2 semaines",
   },
   clients_tagline:
-    "12 ans à construire des interfaces exigeantes pour des grandes marques. Cette rigueur, je l'applique aujourd'hui aux PME qui veulent le même niveau d'exécution, sans les délais d'une agence.",
+    "Avant Viloris, 12 ans de développement pour de grandes marques. Le même niveau d'exigence, appliqué à l'outil de votre PME.",
   clients: [
     { name: "Chanel", logo: "/clients/chanel.webp" },
     { name: "Fnac-Darty", logo: "/clients/fnacdarty.webp" },
@@ -83,24 +84,24 @@ export const TOOLS: { label: string; icon?: string }[] = [
 ];
 
 export const PAIN_SECTION = {
-  label: "Diagnostic",
-  title: "Votre business tourne. Vos systèmes, non.",
-  subtitle: "Vous avancez, mais vous portez tout à bout de bras.",
-  cta: "Construire mon infrastructure digitale",
+  label: "Le constat",
+  title: "Le tableur partagé ne suffit plus.",
+  subtitle: "Et les logiciels du marché vous obligent à changer votre façon de travailler.",
+  cta: "En parler avec moi",
 };
 
 export const PAINS = [
   {
-    title: "Temps perdu",
-    body: "Relances manuelles, devis à recopier, suivis qui tombent à l'eau. Sans vous, rien ne tourne. Votre croissance est plafonnée par votre propre disponibilité.",
+    title: "Des ressaisies",
+    body: "La même information tapée dans le tableur, l'agenda et le logiciel métier. Du temps perdu, et des erreurs qui finissent par coûter cher.",
   },
   {
-    title: "Vos outils ne se parlent pas",
-    body: "CRM, agenda, formulaires, Google Sheets : chaque brique est isolée. Résultat : vous saisissez deux fois les mêmes infos et vous pilotez à l'instinct.",
+    title: "Des relances oubliées",
+    body: "Un devis sans réponse, un document qui manque, un dossier en attente. Personne ne relance, parce que rien ne vous le rappelle.",
   },
   {
-    title: "Trafic & Acquisition",
-    body: "Votre offre est solide, mais votre visibilité repose sur le réseau et le hasard. Pas de machine d'acquisition, pas de croissance prévisible.",
+    title: "Un logiciel qui ne vous ressemble pas",
+    body: "Trop de cases inutiles, pas celles dont vous avez besoin. Chaque demande de changement prend des mois, quand elle est acceptée.",
   },
 ];
 
@@ -214,44 +215,34 @@ export const UPCOMING_PROJECT = {
 };
 
 export const PROCESS_SECTION = {
-  label: "Processus",
-  title: "6 étapes. Zéro mauvaise surprise.",
-  beyond_title: "Et après la livraison ?",
+  label: "Ma démarche",
+  title: "Du premier appel au suivi, quatre étapes.",
+  beyond_title: "Et une fois l'outil en place ?",
   beyond_description:
-    "Nous ne disparaissons pas une fois le projet terminé. Si vous voulez continuer à optimiser, ajouter des automatisations ou scaler sans recruter, un accompagnement mensuel est possible.",
-  cta: "Discuter de mon projet",
+    "Votre activité change, votre outil aussi. Avec le suivi mensuel, vous me demandez une évolution et vous l'avez en 2 à 3 jours. Maintenance et accompagnement dès 140 € HT par mois.",
+  cta: "Parler de mon projet",
 };
 
 export const PROCESS_STEPS = [
   {
     n: "01",
-    title: "Appel découverte — gratuit",
-    body: "30 minutes pour identifier ce qui freine vraiment votre croissance. Nous posons des questions. Pas de pitch. Pas d'engagement.",
+    title: "Appel découverte, gratuit",
+    body: "30 minutes pour comprendre votre activité et ce qui vous ralentit. Des questions, pas de démonstration commerciale, aucun engagement.",
   },
   {
     n: "02",
-    title: "Diagnostic & proposition",
-    body: "Si votre situation correspond, vous recevez une proposition sous 48h. Prix fixe, périmètre clair, zéro zone grise.",
+    title: "Proposition sous 48 h",
+    body: "Un périmètre précis, un prix ferme et un calendrier. Vous savez exactement ce que vous achetez.",
   },
   {
     n: "03",
-    title: "Signature & démarrage",
-    body: "Vous signez le devis et réglez 50 % à la commande. On démarre dans les 48h.",
+    title: "Réalisation par étapes",
+    body: "Je vous montre l'outil à chaque étape et vous l'essayez sur vos vrais cas. Vos retours sont pris en compte au fil de l'eau, et votre équipe est formée.",
   },
   {
     n: "04",
-    title: "Construction du système",
-    body: "Nous construisons chaque automatisation de zéro, documentée avant d'être développée. Vous voyez ce qui se construit, étape par étape.",
-  },
-  {
-    n: "05",
-    title: "Suivi transparent",
-    body: "Un espace Notion dédié, mis à jour en continu. Un point écrit chaque fin de semaine — vous savez toujours où on en est.",
-  },
-  {
-    n: "06",
-    title: "Livraison garantie",
-    body: "Nous livrons, vous testez. Les 50 % restants sont réglés uniquement quand vous êtes 100 % satisfait.",
+    title: "Suivi dans la durée",
+    body: "Votre outil continue de fonctionner et évolue avec vous. Une demande de changement, et elle est en ligne en 2 à 3 jours.",
   },
 ];
 
@@ -259,10 +250,10 @@ export const FOUNDER_SECTION = {
   label: "Le mot du fondateur",
   name: "Adrien Vidal",
   company: "Fondateur · VILORIS.IO",
-  role: "Développeur IA & Automatisation",
+  role: "Développeur d'outils sur mesure",
   bio: [
-    "J'ai passé 12 ans à construire des interfaces exigeantes pour Chanel, Darty, Fnac. Cette rigueur technique, je l'applique à l'automatisation IA pour les PME qui veulent scaler sans recruter.",
-    "L'objectif à chaque mission : comprendre ce qui freine vraiment votre croissance et construire des systèmes sur-mesure qui vous redonnent du temps.",
+    "J'ai passé 12 ans à développer pour Chanel, Darty ou la Fnac, avec des exigences fortes de qualité et de délais. Aujourd'hui, je mets cette rigueur au service des PME.",
+    "Je travaille seul : vous parlez directement à celui qui construit votre outil. C'est ce qui me permet de comprendre votre métier dans le détail et de livrer vos changements en quelques jours. Je construis aussi mes propres outils, pour piloter mon activité.",
   ],
   testimonial: {
     quote:
@@ -276,95 +267,90 @@ export const CLIENTS = ["Chanel", "Fnac", "Darty", "Prisma Media", "Yves Rocher"
 
 export const FAQ_SECTION = {
   label: "FAQ",
-  title: "Vos questions, nos réponses",
+  title: "Vos questions, mes réponses",
 };
 
 export const FAQ = [
   {
-    q: "Comment se passe une mission concrètement ?",
-    a: `Tout commence par un appel de 30 minutes, gratuit et sans engagement.
-L'objectif : comprendre ce qui freine votre croissance et voir si nous pouvons y remédier ensemble. Aucun pitch, aucune pression.
+    q: "Comment se passe un projet concrètement ?",
+    a: `Tout commence par un appel de 30 minutes, gratuit et sans engagement. Je cherche à comprendre votre activité : qui fait quoi, avec quels outils, et où se perd le temps.
 
-Si votre situation correspond à ce que nous faisons, vous recevez un devis sur-mesure. Une fois validé, nous démarrons dans les 48h.
+Si je peux vous aider, vous recevez sous 48 h une proposition avec un périmètre précis, un prix ferme et un calendrier.
 
-Chaque mission inclut une phase de diagnostic approfondi. Nous cartographions vos processus, nous identifions les points de friction et nous construisons la solution adaptée à votre réalité. Jamais un template.`,
+Ensuite, je construis par étapes. À chaque étape, je vous montre l'outil et vous l'essayez sur vos vrais cas. Rien n'est figé avant que vous l'ayez validé.`,
   },
   {
-    q: "Quels outils utilisez-vous ?",
-    a: `Nous nous adaptons à votre environnement existant. Aucune raison de tout reconstruire ou de vous imposer des outils que vous ne maîtrisez pas.
+    q: "Combien ça coûte ?",
+    a: `Un outil sur mesure démarre à 3 500 € HT pour une version prête à l'emploi, et à 6 000 € HT pour une application dédiée. Une automatisation seule démarre à 800 € HT.
 
-Notre stack principal tourne autour de N8N pour l'automatisation, orchestré avec vos outils du quotidien : Notion, Google Workspace, votre CRM. Pour les agents IA, nous utilisons des modèles hébergés en Europe, conformes RGPD.
+Le prix définitif est fixé dans la proposition, après l'appel découverte. Il ne bouge plus ensuite, sauf si vous décidez d'élargir le périmètre.
 
-Le choix final dépend toujours de votre projet et de vos contraintes. Nous prenons ce qui est juste pour vous, pas ce qui est tendance.`,
+Pour faire évoluer l'outil dans la durée, le suivi mensuel démarre à 140 € HT par mois.`,
   },
   {
-    q: "Combien de temps prend la livraison ?",
-    a: `Une automatisation ciblée peut être opérationnelle en quelques jours.
-Un système complet (agent IA, intégrations, site) demande généralement 2 à 4 semaines.
+    q: "Combien de temps avant d'utiliser l'outil ?",
+    a: `Le développement va vite. Ce qui fixe le rythme, c'est surtout le temps que vous pouvez consacrer aux essais et aux retours.
 
-Les délais sont définis ensemble lors de l'onboarding, une fois que nous avons une vision claire du périmètre. Aucun chiffre annoncé au hasard.
+C'est pour ça que je travaille par étapes : vous avez une première version entre les mains tôt, et on l'ajuste ensemble à votre rythme jusqu'à la mise en service.
 
-Si un imprévu technique survient, vous êtes informé immédiatement. La transparence fait partie du contrat.`,
+Une fois l'outil en service, une demande de changement est en ligne en 2 à 3 jours.`,
   },
   {
     q: "Ai-je besoin de compétences techniques ?",
-    a: `Aucune. Tout ce que nous livrons est documenté et pris en main avec vous.
+    a: `Aucune. L'outil est pensé pour votre équipe, avec vos mots et vos étapes.
 
-L'objectif : que vous soyez autonome dès la livraison, sans dépendre de nous pour les opérations du quotidien.
-
-Pour les évolutions et la maintenance, c'est une autre histoire. C'est là qu'une relation long terme prend tout son sens.`,
+Je forme les personnes qui vont s'en servir, et chaque outil est livré avec sa documentation. Pour une évolution, il suffit de me la décrire.`,
   },
   {
-    q: "Que se passe-t-il après la livraison ?",
-    a: `La livraison est un point de départ. Un système digital qui reste figé le jour de sa mise en ligne perd de sa valeur en quelques mois.
+    q: "Que deviennent mes données ?",
+    a: `Elles restent les vôtres. L'outil s'appuie sur des services reconnus et conformes au RGPD, et vous gardez un accès complet à vos données à tout moment.
 
-Nous proposons un accompagnement mensuel pour monitorer vos automatisations, les faire évoluer et en ajouter de nouvelles au fil de votre croissance.
-
-L'objectif à terme : scaler sans jamais être ralenti par l'opérationnel.`,
+Le choix de l'hébergement se fait avec vous, selon la sensibilité de vos informations. Si vous avez une contrainte particulière, on en parle dès le premier appel.`,
   },
   {
-    q: "Mes données sont-elles en sécurité ?",
-    a: `Vos données restent en Europe, point final.
+    q: "Et si j'ai déjà des outils ?",
+    a: `On part de ce que vous avez. Si votre agenda, votre logiciel de facturation ou votre site doivent rester, je relie le nouvel outil à eux pour que l'information ne soit saisie qu'une fois.
 
-Nous n'utilisons aucune plateforme américaine pour traiter vos informations. Nos solutions sont hébergées sur des serveurs européens, conformes RGPD, avec des modèles IA dédiés à votre projet, jamais mutualisés.
-
-Performances maximales sans compromis sur la confidentialité. Ce n'est pas une option.`,
+Je vérifie avant de m'engager que ces connexions sont possibles avec vos logiciels.`,
   },
 ];
 
 export const CTA_FINAL = {
-  headline: "Une tâche vous fait perdre des heures ?",
-  headline_accent: "Discutons-en.",
-  description: "Réservez un audit gratuit. Aucune pression commerciale, uniquement de l'expertise.",
-  cta: "Lancer l'audit gratuit",
-  subtext: "Audit 100% gratuit et sans engagement",
+  headline: "Votre façon de travailler mérite",
+  headline_accent: "un outil à sa mesure.",
+  description:
+    "Parlons-en 30 minutes. Vous repartez avec une idée claire de ce qui est possible, même si on ne travaille pas ensemble.",
+  cta: "Prendre rendez-vous",
+  subtext: "Gratuit et sans engagement",
 };
 
 export const CONTACT_FORM = {
-  title: "Réservez votre audit gratuit",
-  subtitle: "Décrivez votre situation. Je reviens sous 24h.",
+  title: "Prenons rendez-vous",
+  subtitle: "Décrivez votre situation en quelques mots. Je vous réponds sous 24 h.",
   fields: {
     name: { label: "Prénom & Nom", placeholder: "Jean Dupont" },
     email: { label: "Email professionnel", placeholder: "jean@entreprise.com" },
     company: { label: "Entreprise", placeholder: "Votre société (optionnel)" },
-    services: { label: "Service(s) qui vous intéressent" },
+    services: { label: "Ce qui vous intéresse" },
     message: {
       label: "Votre situation en quelques mots",
-      placeholder: "Ex : je perds 2h par jour à qualifier mes leads manuellement…",
+      placeholder:
+        "Ex : on suit nos dossiers clients dans un tableur partagé et on oublie des relances…",
     },
   },
   services: [
-    "Agents IA & Automatisations",
-    "Site Web Haute Performance",
-    "Maintenance & Évolution",
+    "Un outil sur mesure",
+    "Automatiser des tâches",
+    "Un agent IA",
+    "Un site web",
     "Je ne sais pas encore",
   ],
   cta: "Envoyer ma demande",
-  gdpr: "Données hébergées en Europe · RGPD",
+  gdpr: "Conforme RGPD · vos données ne servent qu'à vous répondre",
   success: {
     title: "Demande reçue !",
     message:
-      "Je reviens vers vous sous 24h. En attendant, vous pouvez réserver directement un créneau dans mon agenda.",
+      "Je reviens vers vous sous 24 h. En attendant, vous pouvez réserver directement un créneau dans mon agenda.",
     cta: "Réserver mon créneau maintenant",
   },
   error: {
@@ -372,7 +358,7 @@ export const CONTACT_FORM = {
       "L'envoi n'a pas abouti. Écrivez-moi directement ou réservez un créneau dans mon agenda.",
     emailCta: "M'écrire",
     calendlyCta: "Réserver un créneau",
-    mailSubject: "Demande d'audit",
+    mailSubject: "Demande de rendez-vous",
   },
 };
 
