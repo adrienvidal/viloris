@@ -5,7 +5,7 @@
 ```
 ✅ Fait      CLAUDE.md aligné sur la base (PR #1), formulaire de contact réparé en prod
 ⛔ Bloqué    Rien
-🎯 Priorité  Relire et fusionner la PR #1
+🎯 Priorité  Passer dev en production quand Adrien le décide
 ```
 
 ## Réalisé
@@ -26,9 +26,10 @@
 - `RESEND_API_KEY` supprimée du projet Vercel (accord d'Adrien). La clé reste valide chez Resend
   tant qu'elle n'y est pas révoquée.
 - `.claude/sessions/` désormais suivi par git (le reste de `.claude/` reste ignoré), dans la PR #1.
+- PR #1 fusionnée dans `dev` (squash), branche supprimée.
 
 ## Reste à faire
-- [ ] Relire et fusionner la PR #1 (CLAUDE.md, .gitignore, sessions désormais suivies par git).
+- [ ] Mettre `dev` en production (`gh pr create --base main --head dev`), sur accord d'Adrien.
 - [ ] Si les aperçus de `dev` doivent envoyer des mails : ajouter les variables Gmail pour Preview.
 
 ## Blockers
