@@ -32,3 +32,6 @@ out/
 *.sw?
 .vercel
 .env*
+
+# TypeScript incremental build cache
+*.tsbuildinfo
