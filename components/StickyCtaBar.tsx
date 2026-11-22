@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useContactModal } from "@/lib/contact-modal-context";
+import { NAV } from "@/lib/data";
 import { useScrollVisibility } from "@/lib/use-scroll-visibility";
 
 export function StickyCtaBar() {
@@ -24,7 +25,7 @@ export function StickyCtaBar() {
               onClick={openModal}
               className="group w-full inline-flex items-center justify-center gap-2 rounded-full cta-btn px-6 py-3.5 text-sm font-medium text-primary-foreground cursor-pointer"
             >
-              Réserver mon audit gratuit
+              {NAV.cta}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </button>
           </div>

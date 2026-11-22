@@ -20,6 +20,14 @@ export const NAV = {
   cta: "Prendre rendez-vous",
 };
 
+export const OG_IMAGE = {
+  headline: "Un outil fait pour",
+  headline_accent: "votre façon de travailler.",
+  subtitle: "Vous demandez un changement, vous l'avez en 2 à 3 jours.",
+  role: "Développeur d'outils sur mesure · Viloris",
+  badge: "Premier appel gratuit · 30 min",
+};
+
 export const NAV_LINKS = [
   { label: "Réalisation", href: "#realisations" },
   { label: "Services", href: "#services" },
@@ -163,6 +171,8 @@ export const REALISATIONS_SECTION = {
   problem_label: "Avant",
   solution_label: "Avec l'outil",
   video_cta: "Voir l'outil en vidéo",
+  details_show: "Voir l'avant et l'après",
+  details_hide: "Masquer le détail",
 };
 
 export type Project = {

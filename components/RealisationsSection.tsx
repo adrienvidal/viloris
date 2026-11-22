@@ -99,7 +99,9 @@ export function RealisationsSection() {
                       onClick={() => toggleProject(i)}
                       className="mt-5 flex items-center gap-1.5 text-sm text-primary font-medium md:hidden cursor-pointer"
                     >
-                      {isExpanded ? "Masquer le détail" : "Voir le problème & la solution"}
+                      {isExpanded
+                        ? REALISATIONS_SECTION.details_hide
+                        : REALISATIONS_SECTION.details_show}
                       <ChevronDown
                         className={`h-4 w-4 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
                       />
