@@ -21,16 +21,15 @@
 - Test en production : `POST /api/contact` répond 200, mail reçu sur contact@viloris.io.
 - Dossier relié au projet Vercel `agence-ia` (`npx vercel link`). Le `VERCEL_OIDC_TOKEN` ajouté
   à `.env.local` a été retiré.
-- Archivées (simple `mv` : `.claude/` est ignoré par git ici) : 2026-06-24_migration-emailing-gmail,
+- Archivées : 2026-06-24_migration-emailing-gmail,
   2026-07-27_renommage-projet-viloris.
+- `RESEND_API_KEY` supprimée du projet Vercel (accord d'Adrien). La clé reste valide chez Resend
+  tant qu'elle n'y est pas révoquée.
+- `.claude/sessions/` désormais suivi par git (le reste de `.claude/` reste ignoré), dans la PR #1.
 
 ## Reste à faire
 - [ ] Relire et fusionner la PR #1 (CLAUDE.md, .gitignore, sessions désormais suivies par git).
 - [ ] Si les aperçus de `dev` doivent envoyer des mails : ajouter les variables Gmail pour Preview.
-
-- `RESEND_API_KEY` supprimée du projet Vercel (accord d'Adrien). La clé reste valide chez Resend
-  tant qu'elle n'y est pas révoquée.
-- `.claude/sessions/` désormais suivi par git (le reste de `.claude/` reste ignoré), dans la PR #1.
 
 ## Blockers
 - Aucun.
