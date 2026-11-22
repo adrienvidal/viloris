@@ -5,7 +5,7 @@
 ```
 ✅ Fait      CLAUDE.md aligné sur la base (PR #1), formulaire de contact réparé en prod
 ⛔ Bloqué    Rien
-🎯 Priorité  Passer dev en production quand Adrien le décide
+🎯 Priorité  Rien d'urgent sur le site
 ```
 
 ## Réalisé
@@ -27,9 +27,10 @@
   tant qu'elle n'y est pas révoquée.
 - `.claude/sessions/` désormais suivi par git (le reste de `.claude/` reste ignoré), dans la PR #1.
 - PR #1 fusionnée dans `dev` (squash), branche supprimée.
+- `dev` mis en production (PR #3, merge commit pour garder `dev` et `main` alignées), déploiement
+  Vercel prêt, site et route de contact vérifiés.
 
 ## Reste à faire
-- [ ] Mettre `dev` en production (`gh pr create --base main --head dev`), sur accord d'Adrien.
 - [ ] Si les aperçus de `dev` doivent envoyer des mails : ajouter les variables Gmail pour Preview.
 
 ## Blockers
