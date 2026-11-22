@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import { CALENDLY_URL, CONTACT_EMAIL } from "@/lib/data";
+import { CALENDLY_URL, CONTACT_EMAIL, SITE_URL } from "@/lib/data";
 
 const FROM = `Adrien Vidal — Viloris.io <${CONTACT_EMAIL}>`;
 const TO = CONTACT_EMAIL;
@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
             <a href="${CALENDLY_URL}" style="color:#60a7d6">Réserver un créneau →</a>
           </p>
           <br>
-          <p style="font-family:sans-serif">Adrien Vidal<br>Fondateur · <a href="https://viloris.io" style="color:#60a7d6">Viloris.io</a></p>
+          <p style="font-family:sans-serif">Adrien Vidal<br>Fondateur · <a href="${SITE_URL}" style="color:#60a7d6">Viloris.io</a></p>
         `,
     });
   } catch (err) {
