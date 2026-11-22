@@ -1,4 +1,4 @@
-import { FAQ, SITE_URL } from "@/lib/data";
+import { FAQ, FOUNDER_SECTION, SITE_URL } from "@/lib/data";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -17,7 +17,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Adrien Vidal",
-  jobTitle: "Développeur IA & Automatisation",
+  jobTitle: FOUNDER_SECTION.role,
   url: SITE_URL,
   worksFor: {
     "@type": "LocalBusiness",
