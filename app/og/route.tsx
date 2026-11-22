@@ -54,10 +54,11 @@ export function GET() {
             fontWeight: 700,
             lineHeight: 1.05,
             maxWidth: "900px",
+            display: "flex",
+            flexDirection: "column",
           }}
         >
-          {OG_IMAGE.headline}
-          <br />
+          <span>{OG_IMAGE.headline}</span>
           <span style={{ color: "#60a7d6" }}>{OG_IMAGE.headline_accent}</span>
         </div>
         <div style={{ color: "#999fa4", fontSize: "24px", maxWidth: "700px", lineHeight: 1.4 }}>
