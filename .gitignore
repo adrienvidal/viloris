@@ -13,7 +13,8 @@ dist
 
 # Next.js
 .next/
-.claude/
+.claude/*
+!.claude/sessions/
 out/
 
 # Env
@@ -29,3 +30,5 @@ out/
 *.njsproj
 *.sln
 *.sw?
+.vercel
+.env*
