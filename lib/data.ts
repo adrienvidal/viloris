@@ -154,7 +154,7 @@ export const SERVICES: { icon: string; name: string; description: string; price:
     name: "Formation et suivi",
     description:
       "Des formations sur vos propres cas, et un suivi mensuel pour que vos outils continuent d'évoluer avec vous.",
-    price: "Dès 800 € HT",
+    price: "Formation dès 800 € HT · suivi dès 140 € HT/mois",
   },
 ];
 
@@ -296,7 +296,7 @@ Une fois l'outil en service, une demande de changement est en ligne en 2 à 3 jo
     q: "Ai-je besoin de compétences techniques ?",
     a: `Aucune. L'outil est pensé pour votre équipe, avec vos mots et vos étapes.
 
-Je forme les personnes qui vont s'en servir, et chaque outil est livré avec sa documentation. Pour une évolution, il suffit de me la décrire.`,
+Je forme les personnes qui vont s'en servir, et chaque outil est livré avec sa documentation. Pour une évolution, il suffit de me la décrire : je vous indique le délai et le prix avant de m'y mettre.`,
   },
   {
     q: "Que deviennent mes données ?",
