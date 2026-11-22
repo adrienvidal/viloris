@@ -1,4 +1,4 @@
-export const SITE_URL = "https://viloris.io";
+export const SITE_URL = "https://www.viloris.io";
 
 export const SHOW_REALISATIONS = true;
 export const SHOW_UPCOMING_PROJECT = false;
@@ -403,6 +403,6 @@ export const FOOTER = {
   subfooter: {
     text: "© Tous droits réservés — Site réalisé par ",
     linkLabel: "Viloris.io",
-    linkHref: "https://viloris.io",
+    linkHref: SITE_URL,
   },
 };
