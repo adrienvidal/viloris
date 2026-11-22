@@ -3,9 +3,9 @@
 ## Reprise
 
 ```
-✅ Fait      Formulaire réparé en prod, écran de repli en cas d'échec (PR #6)
+✅ Fait      Formulaire réparé, écran de repli en cas d'échec en prod (PR #6, #7)
 ⛔ Bloqué    Rien
-🎯 Priorité  Fusionner la PR #6 puis mettre en production
+🎯 Priorité  Alerte téléphone si le formulaire échoue (optionnel)
 ```
 
 ## Réalisé
@@ -37,13 +37,13 @@
   (plan gratuit), appels de fonction visibles sur 30 min seulement sans Observability Plus,
   la modale n'est pas une page donc Analytics ne la voit pas, et le code ne trace pas les échecs.
 
-- Formulaire, PR #6 vers `dev` (non fusionnée) : en cas d'échec, la modale propose l'adresse mail
+- Formulaire, PR #6 fusionnée dans `dev` puis mise en production (PR #7, déploiement prêt, texte de
+  repli vérifié sur www.viloris.io). Couleurs adoucies à la demande d'Adrien (plus de rouge) : en cas d'échec, la modale propose l'adresse mail
   (mail pré-rempli avec le message) et le lien Calendly. Le mail de notification décide seul du succès :
   une confirmation au prospect qui échoue n'affiche plus d'erreur. Les échecs sont tracés dans les journaux
   avec leur cause. Testé en local avec un mot de passe Gmail faux.
 
 ## Reste à faire
-- [ ] Fusionner la PR #6 dans `dev` (accord d'Adrien), puis mettre `dev` en production.
 - [ ] Optionnel : alerte téléphone en cas d'échec du formulaire (ntfy, hors Gmail).
 - [ ] Optionnel : passer en revue la boîte contact@viloris.io depuis juin pour repérer un prospect
   qui aurait écrit directement après un échec du formulaire.
