@@ -104,7 +104,7 @@ export function ContactModal() {
     "w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none focus:border-primary/60 focus:ring-2 focus:ring-primary/15 transition";
 
   const fallbackLinkClass =
-    "rounded-full border border-destructive/40 px-3 py-1.5 font-medium text-foreground transition hover:bg-destructive/15";
+    "rounded-full border border-border bg-background px-3.5 py-1.5 font-medium text-foreground transition hover:border-primary/60 hover:text-primary";
 
   return (
     <AnimatePresence>
@@ -272,7 +272,7 @@ export function ContactModal() {
                     </div>
 
                     {status === "error" && (
-                      <div className="rounded-lg bg-destructive/10 border border-destructive/30 px-4 py-3 text-xs text-destructive">
+                      <div className="rounded-xl border border-border bg-surface px-4 py-3 text-xs text-muted-foreground">
                         <p>{CONTACT_FORM.error.message}</p>
                         <div className="mt-2.5 flex flex-wrap gap-2">
                           <a
