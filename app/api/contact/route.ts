@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import { CALENDLY_URL } from "@/lib/data";
+import { CALENDLY_URL, CONTACT_EMAIL } from "@/lib/data";
 
-const FROM = "Adrien Vidal — Viloris.io <contact@viloris.io>";
-const TO = "contact@viloris.io";
+const FROM = `Adrien Vidal — Viloris.io <${CONTACT_EMAIL}>`;
+const TO = CONTACT_EMAIL;
 
 function escapeHtml(str: string) {
   return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -39,14 +39,14 @@ export async function POST(req: NextRequest) {
 
   const transporter = createTransporter();
 
+  // The notification decides success: if it fails, the lead would be lost.
   try {
-    await Promise.all([
-      transporter.sendMail({
-        from: FROM,
-        to: TO,
-        replyTo: email,
-        subject: `[Audit] Nouvelle demande de ${name}`,
-        html: `
+    await transporter.sendMail({
+      from: FROM,
+      to: TO,
+      replyTo: email,
+      subject: `[Audit] Nouvelle demande de ${name}`,
+      html: `
           <h2 style="font-family:sans-serif">Nouvelle demande d'audit</h2>
           <table style="font-family:sans-serif;border-collapse:collapse">
             <tr><td style="padding:4px 12px 4px 0;color:#666">Nom</td><td><strong>${safeName}</strong></td></tr>
@@ -56,12 +56,20 @@ export async function POST(req: NextRequest) {
           </table>
           <p style="font-family:sans-serif;margin-top:16px"><strong>Message :</strong><br>${safeMessage}</p>
         `,
-      }),
-      transporter.sendMail({
-        from: FROM,
-        to: email,
-        subject: "Votre demande d'audit a bien été reçue — Viloris.io",
-        html: `
+    });
+  } catch (err) {
+    console.error("[contact] notification failed", { from: email, err });
+    return NextResponse.json({ error: "send_failed" }, { status: 500 });
+  }
+
+  // The confirmation is a courtesy: a failure (e.g. typo in the address) must not
+  // show an error to a prospect whose request was already received.
+  try {
+    await transporter.sendMail({
+      from: FROM,
+      to: email,
+      subject: "Votre demande d'audit a bien été reçue — Viloris.io",
+      html: `
           <p style="font-family:sans-serif">Bonjour ${firstName},</p>
           <p style="font-family:sans-serif">J'ai bien reçu votre demande et je reviens vers vous sous 24h.</p>
           <p style="font-family:sans-serif">En attendant, vous pouvez réserver directement un créneau dans mon agenda :<br>
@@ -70,13 +78,9 @@ export async function POST(req: NextRequest) {
           <br>
           <p style="font-family:sans-serif">Adrien Vidal<br>Fondateur · <a href="https://viloris.io" style="color:#60a7d6">Viloris.io</a></p>
         `,
-      }),
-    ]);
-  } catch {
-    return NextResponse.json(
-      { error: "Erreur lors de l'envoi. Veuillez réessayer." },
-      { status: 500 },
-    );
+    });
+  } catch (err) {
+    console.error("[contact] confirmation failed", { to: email, err });
   }
 
   return NextResponse.json({ success: true });

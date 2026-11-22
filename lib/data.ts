@@ -3,6 +3,7 @@ export const SITE_URL = "https://viloris.io";
 export const SHOW_REALISATIONS = true;
 export const SHOW_UPCOMING_PROJECT = false;
 export const CALENDLY_URL = "https://calendly.com/contact-viloris/30min";
+export const CONTACT_EMAIL = "contact@viloris.io";
 
 export const META = {
   title: "viloris.io — Automatisation IA & Agents sur-mesure",
@@ -365,6 +366,13 @@ export const CONTACT_FORM = {
     message:
       "Je reviens vers vous sous 24h. En attendant, vous pouvez réserver directement un créneau dans mon agenda.",
     cta: "Réserver mon créneau maintenant",
+  },
+  error: {
+    message:
+      "L'envoi n'a pas abouti. Écrivez-moi directement ou réservez un créneau dans mon agenda.",
+    emailCta: "M'écrire",
+    calendlyCta: "Réserver un créneau",
+    mailSubject: "Demande d'audit",
   },
 };
 
