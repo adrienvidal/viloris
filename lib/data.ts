@@ -201,7 +201,20 @@ export const PROJECTS: Project[] = [
     solution:
       "Le cabinet paramètre lui-même ses fiches clients et ses types d'impôts. Chacun voit ce que son profil autorise, et chaque validation est tracée. Les relances partent à 60, 30 et 15 jours de chaque échéance. L'outil et les données appartiennent au cabinet.",
     metric: { value: "2 à 3 jours", label: "pour chaque évolution demandée" },
-    images: [],
+    images: [
+      {
+        src: "/realisations/serre-dossiers.png",
+        alt: "Liste des dossiers clients du cabinet, avec régime de TVA et lettre de mission (données fictives)",
+      },
+      {
+        src: "/realisations/serre-matrice-tva.png",
+        alt: "Matrice des déclarations de TVA de l'année, mois par mois et dossier par dossier (données fictives)",
+      },
+      {
+        src: "/realisations/serre-fiche-dossier.png",
+        alt: "Fiche d'un dossier client avec ses prochaines échéances et l'historique des modifications (données fictives)",
+      },
+    ],
   },
 ];
 
