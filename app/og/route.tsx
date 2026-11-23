@@ -1,5 +1,4 @@
 import { ImageResponse } from "next/og";
-import { OG_IMAGE } from "@/lib/data";
 
 export const runtime = "edge";
 
@@ -54,15 +53,13 @@ export function GET() {
             fontWeight: 700,
             lineHeight: 1.05,
             maxWidth: "900px",
-            display: "flex",
-            flexDirection: "column",
           }}
         >
-          <span>{OG_IMAGE.headline}</span>
-          <span style={{ color: "#60a7d6" }}>{OG_IMAGE.headline_accent}</span>
+          Automatisation IA &<br />
+          <span style={{ color: "#60a7d6" }}>Agents sur-mesure</span>
         </div>
         <div style={{ color: "#999fa4", fontSize: "24px", maxWidth: "700px", lineHeight: 1.4 }}>
-          {OG_IMAGE.subtitle}
+          Pour les PME qui veulent scaler sans recruter.
         </div>
       </div>
 
@@ -89,7 +86,9 @@ export function GET() {
             <span style={{ color: "#f6f9fb", fontSize: "20px", fontWeight: 600 }}>
               Adrien Vidal
             </span>
-            <span style={{ color: "#999fa4", fontSize: "16px" }}>{OG_IMAGE.role}</span>
+            <span style={{ color: "#999fa4", fontSize: "16px" }}>
+              Développeur IA & Automatisation · WEBNROLLS
+            </span>
           </div>
         </div>
         <div
@@ -101,7 +100,7 @@ export function GET() {
             fontSize: "16px",
           }}
         >
-          {OG_IMAGE.badge}
+          Audit gratuit 30 min
         </div>
       </div>
     </div>,

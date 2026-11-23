@@ -35,7 +35,7 @@ export function ProcessSection() {
           <span className="ml-1 text-[10px] text-muted-foreground/40">étapes</span>
         </div>
 
-        <div className="mt-12 md:mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 md:mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {PROCESS_STEPS.map((s, i) => (
             <motion.div
               key={s.n}

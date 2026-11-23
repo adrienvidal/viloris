@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import { ArrowRight, ChevronDown, PlayCircle, Sparkles } from "lucide-react";
+import { ArrowRight, ChevronDown, Sparkles } from "lucide-react";
 import {
   PROJECTS,
   REALISATIONS_SECTION,
@@ -65,7 +64,7 @@ export function RealisationsSection() {
                   <div>
                     <div className="flex flex-wrap items-center gap-1.5">
                       <span className="rounded-full border border-amber-500/40 bg-amber-500/10 px-2.5 py-1 text-[13px] text-amber-400">
-                        {p.badge}
+                        {REALISATIONS_SECTION.demo_badge}
                       </span>
                       {p.tags.map((t) => (
                         <span
@@ -99,9 +98,7 @@ export function RealisationsSection() {
                       onClick={() => toggleProject(i)}
                       className="mt-5 flex items-center gap-1.5 text-sm text-primary font-medium md:hidden cursor-pointer"
                     >
-                      {isExpanded
-                        ? REALISATIONS_SECTION.details_hide
-                        : REALISATIONS_SECTION.details_show}
+                      {isExpanded ? "Masquer le détail" : "Voir le problème & la solution"}
                       <ChevronDown
                         className={`h-4 w-4 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
                       />
@@ -169,34 +166,6 @@ export function RealisationsSection() {
                     </div>
                   </div>
                 </div>
-
-                {p.images.length > 0 && (
-                  <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    {p.images.map((img) => (
-                      <Image
-                        key={img.src}
-                        src={img.src}
-                        alt={img.alt}
-                        width={1200}
-                        height={750}
-                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                        className="h-auto w-full rounded-2xl border border-border"
-                      />
-                    ))}
-                  </div>
-                )}
-
-                {p.videoUrl && (
-                  <a
-                    href={p.videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-                  >
-                    <PlayCircle className="h-4 w-4" />
-                    {REALISATIONS_SECTION.video_cta}
-                  </a>
-                )}
               </motion.article>
             );
           })}

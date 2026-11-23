@@ -71,8 +71,8 @@ export default function Home() {
       <Hero />
       <ToolsBar />
       <PainSection />
-      {SHOW_REALISATIONS && <RealisationsSection />}
       <ServicesSection />
+      {SHOW_REALISATIONS && <RealisationsSection />}
       <ProcessSection />
       <FounderSection />
       <FaqSection />
