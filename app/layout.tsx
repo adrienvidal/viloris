@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ContactModalProvider } from "@/lib/contact-modal-context";
 import { ModalContainer } from "@/components/ModalContainer";
-import { META } from "@/lib/data";
 import { Analytics } from "@vercel/analytics/next";
 
 // Self-hosted (latin, variable) — next/font/google breaks builds when Google Fonts returns extensionless URLs
@@ -22,8 +21,9 @@ const spaceGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-  title: META.title,
-  description: META.description,
+  title: "Adrien Vidal — Automatisation IA & Agents sur-mesure",
+  description:
+    "Développeur senior (Chanel, Darty, Fnac) spécialisé en automatisation IA et agents sur-mesure pour les PME qui veulent scaler sans recruter.",
   authors: [{ name: "Adrien Vidal" }],
   icons: {
     icon: "/favicon-viloris.webp",
