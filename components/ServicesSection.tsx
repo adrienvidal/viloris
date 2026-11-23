@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, ClipboardCheck, Globe, GraduationCap, LucideIcon, Workflow } from "lucide-react";
+import { Bot, Globe, Wrench, Check, LucideIcon } from "lucide-react";
 import { SERVICES_SECTION, SERVICES, SERVICES_LIAISON } from "@/lib/data";
 
-const ICONS: Record<string, LucideIcon> = { Bot, ClipboardCheck, Globe, GraduationCap, Workflow };
+const ICONS: Record<string, LucideIcon> = { Bot, Globe, Wrench };
 
 export function ServicesSection() {
   return (
@@ -28,7 +28,7 @@ export function ServicesSection() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-5 lg:grid-cols-3">
           {SERVICES.map((service, i) => {
             const Icon = ICONS[service.icon];
             return (
@@ -40,7 +40,11 @@ export function ServicesSection() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="group flex flex-col rounded-3xl border border-border bg-surface/40 p-7 transition-colors hover:border-primary/40 hover:bg-surface/70"
               >
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
+                <span className="self-start rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+                  {service.badge}
+                </span>
+
+                <div className="mt-5 grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
                   <Icon className="h-5 w-5" />
                 </div>
 
@@ -52,7 +56,14 @@ export function ServicesSection() {
                   {service.description}
                 </p>
 
-                <p className="mt-auto pt-6 text-sm font-medium text-primary">{service.price}</p>
+                <ul className="mt-6 flex flex-col gap-2.5">
+                  {service.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2.5 text-sm">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             );
           })}
