@@ -79,6 +79,8 @@
 - Aucun.
 
 ## Décisions
+- Mise à jour du 23/11 : le contenu du lot 2 a été retiré de la production à la demande d'Adrien
+  (PR #15 et #16). Voir la session du 23/11.
 - Positionnement du site : sur-mesure poussé dans le détail, réactivité (évolution en ligne en 2 à 3
   jours). Ne jamais annoncer de durée totale (environ 3 mois pour Serre, surtout à cause des retours
   et de la recette client) ni rien qui laisse croire que les évolutions sont gratuites.
